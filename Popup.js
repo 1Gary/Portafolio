@@ -13,6 +13,8 @@ const popup6 = document.querySelector('.popup6');
 const closeButton6 = document.querySelector('.close6');
 const popup7 = document.querySelector('.popup7');
 const closeButton7 = document.querySelector('.close7');
+const popup8 = document.querySelector('.popup8');
+const closeButton8 = document.querySelector('.close8');
 
 
 function openPopup1() {
@@ -68,6 +70,14 @@ function closePopup7() {
   popup7.style.display = 'none';
 }
 
+function openPopup8() {
+  popup8.style.display = 'block';
+}
+
+function closePopup8() {
+  popup8.style.display = 'none';
+}
+
 closeButton1.addEventListener('click', closePopup1);
 closeButton2.addEventListener('click', closePopup2);
 closeButton3.addEventListener('click', closePopup3);
@@ -75,9 +85,10 @@ closeButton4.addEventListener('click', closePopup4);
 closeButton5.addEventListener('click', closePopup5);
 closeButton6.addEventListener('click', closePopup6);
 closeButton7.addEventListener('click', closePopup7);
+closeButton8.addEventListener('click', closePopup8);
 
-window.addEventListener('click', function(event) {
- 
+window.addEventListener('click', function (event) {
+
   if (event.target == popup1) {
     closePopup1();
   }
@@ -98,6 +109,9 @@ window.addEventListener('click', function(event) {
   }
   if (event.target == popup7) {
     closePopup7();
+  }
+  if (event.target == popup8) {
+    closePopup8();
   }
 });
 
